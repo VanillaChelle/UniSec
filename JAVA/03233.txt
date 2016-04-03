@@ -1,0 +1,53 @@
+package javaapplication03231;
+public class SameSu{
+    static int prime(int a){
+        if(a==2)
+            return 1;
+        else{
+            for(int i=2;i<=Math.sqrt(a);i++){
+                if(a%i==0)
+                    return 0;
+            }
+        }
+        return 1;
+    }
+    
+    static int hui(int a){
+        int num=a,j;
+        int b[]=new int [15];
+        for(j=0;num>0;j++){
+            b[j]=num%10;
+            num=num/10;
+        }
+        if(a/10==0){
+            return 1;
+        }
+        else{
+            for(int k=0,m=j-1;k<=j/2-1;k++){
+                if(b[k]!=b[m]){
+                    return 0;
+                }
+                else{
+                    m--;
+                }
+            }
+        }
+        return 1;
+    }
+    
+    public static void main(String args[]){
+        int num=0;
+        for(int i=2;i<=1000000;i++){
+            int p=prime(i),h=hui(i);
+            if((p==1)&&(h==1)){
+                System.out.print(i+"\t");
+                num++;
+                if(num%10==0){
+                    System.out.print("\n");
+                    if(num%100==0)
+                        break;
+                }
+            }
+        }
+    }
+}

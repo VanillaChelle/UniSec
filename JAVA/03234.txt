@@ -1,0 +1,55 @@
+package javaapplication03231;
+import java.util.Scanner;
+public class MerList{
+    public static int[] merge(int[] list1,int num1,int[] list2,int num2){
+        int[] res;
+        int num=num1+num2,m=0,n=0;
+        res= new int [num];
+        for(int i=0;i<num;i++){
+            if(m==num1){
+                res[i]=list2[n];
+                n++;
+            }
+            else if(n==num2){
+                res[i]=list1[m];
+                m++;
+            }
+            else{
+                if(list1[m]<=list2[n]){
+                    res[i]=list1[m];
+                    m++;
+                }
+                else{
+                    res[i]=list2[n];
+                    n++;
+                }
+            }
+        }
+        return res;
+    }
+    
+    public static void main(String agrs[]){
+        Scanner input=new Scanner(System.in);
+        int num1,num2,num;
+        int[] a1,a2,resu;
+        num1=input.nextInt();
+        a1 = new int[num1];
+        for(int i=0;i<num1;i++){
+            a1[i]=input.nextInt();
+        }
+        num2=input.nextInt();
+        a2= new int [num2];
+        for(int j=0;j<num2;j++){
+            a2[j]=input.nextInt();
+        }
+        num=num1+num2;
+        resu= new int [num];
+        resu=merge(a1,num1,a2,num2);
+        for(int m=0;m<num;m++){
+            System.out.print(resu[m]+"\t");
+            if((m+1)%10==0){
+                System.out.print("\n");
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+package javaapplication03231;
+import javax.swing.JOptionPane;
+public class FindPI{
+    public static void main(String args[]){
+        String inputvalue=JOptionPane.showInputDialog("Please input a value");
+        int i=Integer.parseInt(inputvalue);
+        double pi=0.00;
+        
+        for(int j=1;j<=i;j++){
+            pi+=4.0*Math.pow(-1.0, j+1)/(2.0*j-1);
+        }
+        JOptionPane.showMessageDialog(null, pi);
+    }
+}
