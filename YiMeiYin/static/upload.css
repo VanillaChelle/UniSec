@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+
+/*.uploadButton{
+	display:block;
+	height:40px;
+	width:45px;
+	opacity:1.0;
+}*/
+/*.a-upload {
+    padding: 4px 10px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.a-upload  input {
+    position: absolute;
+    font-size: 10px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+.a-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none;
+}*/
+.uploadpage{
+	margin-top: 2rem;
+}
+.xxxfile {
+    position: relative;
+	/*left: 3.6rem;   图标位置*/
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+	color: #888;
+    background: #fafafa;
+    text-decoration: none;
+    text-indent: 0;
+    /*line-height: 20px;*/
+	cursor:pointer;
+	font-size: 0.9rem;
+}
+.xxxfile .xxxin {
+	position: absolute;
+	font-size: 15px;
+	right: -1px;
+	top: -1px;
+	opacity: 0;
+}
+.xxxfile:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none;
+}
+.wordre{
+	width: 65%;
+	height: auto;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+

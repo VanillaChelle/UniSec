@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="format-detection" content="telephone=no">
+      <link rel="stylesheet" type="text/css" href="static/upload.css" />
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+      <link rel="stylesheet" type="text/css" href="static/Uploadify/uploadify.css"  />
+      <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <!-- 引入 jQuery Mobile 库 -->
+      <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <!--<script src="static/Uploadify/jquery.uploadify.js"></script>-->
+      <script src="static/Uploadify/jquery.uploadify.min.js"></script>
+      <script src="jquery.js"></script>
+      
+      <title>上传文件</title>
+  </head>
+
+  <body>
+      <div data-role="page" id="filepage" >
+        <div data-role="header" data-position="fixed">
+           <h1>Upload page</h1>
+        </div>
+        <div data-role="content">
+           <div data-role="navbar" >
+             <ul>
+               <li><a href="#filepage" >上传文件</a></li>
+               <li><a href="#picpage" >上传图片</a></li>
+             </ul>
+           </div>
+
+           
+          <!--<input type="file" style="opacity:0; width:0; height:0;" id="uploadButton" onchange="document.getElementById('textfield').value=this.value" />
+           <div style="width: 30%; height:auto; cursor:pointer;">
+           <input type="button" id="btn" value="浏览..." onclick="document.getElementById('uploadButton').click();"/>
+           </div>
+           <input type="text" id="textfield" />-->
+           <p></p>
+           <input type="file" name="file_upload" id="file_upload" />
+			<script>
+            　$(function(){
+             　　   $('#file_upload').uploadify({
+                   　　 'swf'      :'uploadify.swf',
+                 　　　 'uploader':'uploadify.php',
+					   'auto' : true,
+					   'folder' : '/folders',
+					   'muti' : true,
+					   'buttonText' : 'CHOOSE FILES',
+					   'removeCompleted' : false,
+					   'fileTypeExts'  : '*.jpg;*.jpge;*.gif;*.png'
+					   
+                    　　 // Put your options here
+                　　　});
+            　　　});
+            </script>
+          <p></p>
+           <img src="static/activity_banner.png" width="100%" height="auto"/>
+           <button onclick="jump()">生成二维码</button>
+           
+         </div>
+         
+          
+         
+         
+         <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+              <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </div>
+         </div>
+         
+      </div>
+      
+      
+      
+       <div data-role="page" id="picpage" >
+        <div data-role="header" data-position="fixed">
+           <h1>Upload page</h1>
+        </div>
+        <div data-role="content">
+           <div data-role="navbar" >
+             <ul>
+               <li><a href="#filepage" >上传文件</a></li>
+               <li><a href="#picpage" >上传图片</a></li>
+             </ul>
+           </div>
+           <p></p>
+           <input type="file" name="pic_upload" id="pic_upload" />
+			<script>
+            　$(function(){
+             　　   $('#pic_upload').uploadify({
+                   　　 'swf'      :'uploadify.swf',
+                 　　　 'uploader':'uploadify.php',
+					   'auto' : true,
+					   'folder' : '/folders',
+					   'muti' : true,
+					   'buttonText' : 'CHOOSE PICS',
+					   'removeCompleted' : false
+					   
+                    　　 // Put your options here
+                　　　});
+            　　　});
+            </script>
+          <p></p>
+           <img src="static/activity_banner.png" width="100%" height="auto"/>
+           <button onclick="jump()">生成二维码</button>
+           
+         </div>
+
+         <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+              <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </div>
+         </div>
+         
+      </div>
+        
+  
+      <!--<h1>文件上传页面</h1>
+      <section class="uploadpage">
+        <form>
+        <div style="padding-left: 17%;"><a href="javascript:;" class="file">选择文件
+          <input type="file" name="" id=""  />
+        </a></div>
+        
+        <div style="text-align:center;"><img class="wordre" src="static/53306c9460112.png"  />
+        </div>
+        
+        <div style="padding-left: 17%;"><a href="javascript:;" class="file">选择图片
+          <input type="file" name="" id=""  />
+        </a></div>
+        </form>
+        <div style="text-align:center;"><img class="wordre" src="static/53306c9460112.png"  />
+        </div>-->
+        
+        
+        <!--<div style="text-align:center;"><a href="javascript:;" class="file" onclick="">生成二维码
+          <input type="submit"  />
+        </a></div>-->
+        
+        
+    
+      
+      
+      <script>
+
+      function jump(){
+	     alert("Helloooooo!");
+	  }
+		  
+		  
+      </script>
+      
+  
+  </body>
+</html>
